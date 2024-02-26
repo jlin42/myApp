@@ -29,9 +29,9 @@
         </div>
     </div>
 
-    <div *ngIf="data.isStudent">
-        <label for="school">School: </label>
-        <input type="text" id="school" maxlength="200">
+    <div [ngClass]="{'visible': data.isStudent, 'hidden': !data.isStudent}">
+        <label for="school" >School: </label>
+        <input type="text" id="school" maxlength="200" [(ngModel)]="data.school">
     </div>
 
     <button type="submit" (click)="onSubmit()">Add</button>

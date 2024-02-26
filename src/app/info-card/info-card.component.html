@@ -4,6 +4,6 @@
       <p><strong>Name:</strong> {{ data.name }}</p>
       <p><strong>Age:</strong> {{ data.age }} {{ data.ageSpecifier }}</p>
       <p><strong>Status:</strong> {{ data.isStudent ? 'Student' : 'Not a student' }}</p>
-      <p *ngIf="data.isStudent"><strong>School:</strong> {{ data.school }}</p>
+      <p *ngIf="data.isStudent"><strong>School:</strong> {{ data.school ? data.school : 'No School Specified' }}</p>
     </div>
   </div>

@@ -18,7 +18,7 @@ export class InputFormComponent {
     age: null,
     ageSpecifier: null,
     isStudent: null,
-    school: 'No school specified'
+    school: null
   }
 
   onSubmit() {
@@ -36,7 +36,7 @@ export class InputFormComponent {
       age: null,
       ageSpecifier: null,
       isStudent: null,
-      school: 'No school Specified'
+      school: null
     };
   }
 

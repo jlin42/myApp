@@ -1,6 +1,6 @@
 .app-container {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 
@@ -12,6 +12,7 @@
   border-right: 3px solid black;
   padding-bottom: 10em;
   width: 30%;
+  position: sticky;
 }
 
 .card-container {
