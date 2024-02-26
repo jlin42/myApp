@@ -1,0 +1,40 @@
+input, label {
+    display: block;
+}
+
+
+input {
+    margin-bottom: 1em;
+    border-radius: 5px;
+}
+
+.student-specifier {
+    display: flex;
+}
+
+.age-selector {
+    display: flex;
+    flex-direction: row;
+}
+
+.age-specifier {
+    height: 1.5em;
+}
+
+.invalid {
+    color: red;
+  }
+
+.valid {
+    color: green;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }

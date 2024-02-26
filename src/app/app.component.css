@@ -1,0 +1,21 @@
+.app-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-right: 3px solid black;
+  padding-bottom: 10em;
+  width: 30%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}

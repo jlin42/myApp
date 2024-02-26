@@ -1,0 +1,39 @@
+<div>
+    <form (ngSubmit)="onSubmit()"></form>
+    <label for="name" [ngClass]="{'invalid': !data.name, 'valid': data.name}">Name: </label>
+    <input type="text" id="name" name="name" required maxlength="100" [(ngModel)]="data.name"  required>
+    
+    <div>
+        <label for="age" [ngClass]="{'invalid': !data.age || data.age > 125, 
+            'valid': data.age && data.age <=125}">
+            Age:{{ data.age && data.age > 125 ? ' (Please enter age between 1 and 125)' : '' }}
+        </label>
+        <div class="age-selector">
+            <input type="number" id="age" [(ngModel)]="data.age" name="age" min="1" max="125" required>
+            <select [(ngModel)]="data.ageSpecifier" name="ageSpecifier" class="age-specifier"
+            [ngClass]="{'invalid': !data.ageSpecifier, 'valid': data.ageSpecifier}" required>
+                <option value="years">Years</option>
+                <option value="months">Months</option>
+            </select>
+        </div>
+        
+    </div>
+
+    <div>
+        <label [ngClass]="{'invalid': data.isStudent === null, 'valid': data.isStudent !== null}">Are you a student?</label>
+        <div class="student-specifier">
+            <input type="radio" id="yes" name="student" [(ngModel)]="data.isStudent" [value]="true" required >
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="student" [(ngModel)]="data.isStudent" [value]="false" required>
+            <label for="no">No</label>
+        </div>
+    </div>
+
+    <div *ngIf="data.isStudent">
+        <label for="school">School: </label>
+        <input type="text" id="school" maxlength="200">
+    </div>
+
+    <button type="submit" (click)="onSubmit()">Add</button>
+
+</div>
